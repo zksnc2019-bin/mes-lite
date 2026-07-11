@@ -1,0 +1,14 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <script>
+    // SPA 라우팅: 404를 index.html로 리다이렉트
+    const path = window.location.pathname.replace('/mes-lite', '') || '/'
+    const query = window.location.search ? '?q=' + encodeURIComponent(window.location.search.slice(1)) : ''
+    const hash = window.location.hash ? '&h=' + encodeURIComponent(window.location.hash.slice(1)) : ''
+    window.location.replace('/mes-lite/?p=' + encodeURIComponent(path) + query + hash)
+  </script>
+</head>
+<body></body>
+</html>
